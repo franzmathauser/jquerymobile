@@ -1,0 +1,5 @@
+/* 
+ Some platforms currently have issues with transitions 
+ http://jquerymobile.com/demos/1.1.1/docs/pages/page-transitions.html
+*/ 
+.ui-page { -webkit-backface-visibility: hidden; }
