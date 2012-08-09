@@ -3,3 +3,34 @@
  http://jquerymobile.com/demos/1.1.1/docs/pages/page-transitions.html
 */ 
 .ui-page { -webkit-backface-visibility: hidden; }
+
+/*
+    Customized Icons
+*/
+
+.nav-glyphish-example .ui-btn .ui-btn-inner { padding-top: 40px !important; }
+.nav-glyphish-example .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
+
+.nav-glyphish-example #home .ui-icon { background:  url(../img/icons/53-house.png) 50% 50% no-repeat;  background-size: 27px 27px; }
+
+.nav-glyphish-example #star .ui-icon { background:  url(../img/icons/28-star.png) 50% 50% no-repeat;  background-size: 27px 27px; }
+
+.nav-glyphish-example #map .ui-icon { background:  url(../img/icons/103-map.png) 50% 50% no-repeat;  background-size: 27px 27px; }
+
+.nav-glyphish-example #contact .ui-icon { background:  url(../img/icons/112-group.png) 50% 50% no-repeat;  background-size: 27px 27px; }
+
+.nav-glyphish-example #blog .ui-icon { background:  url(../img/icons/96-book.png) 50% 50% no-repeat;  background-size: 27px 27px; }
+
+.nav-glyphish-example #images .ui-icon { background:  url(../img/icons/41-picture-frame.png) 50% 50% no-repeat;  background-size: 27px 27px; }
+
+#index img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#index h2, #index h3{
+    text-align: center;
+}
+
+
+
