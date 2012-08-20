@@ -1,18 +1,7 @@
-<!DOCTYPE html>
-<html>
+<?php
+require("header.html");
+?>
 
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>jQueryMobile Prototype</title>
-		<link rel="stylesheet" href="css/jquery.mobile-1.1.1.css" />
-		<link rel="stylesheet" href="css/app.css" />
-		<script src="js/jquery-1.7.2.js"></script>
-		<script src="js/jquery.mobile-1.1.1.js"></script>
-                <script src="js/app.js"></script>
-	</head>
-
-	<body>
 
             
             <div data-role="page" id="index">
@@ -28,18 +17,9 @@
                 </div>
 
 
-                <div data-role="footer" data-position="fixed" class="nav-glyphish-example">
-                    <div data-role="navbar" data-iconpos="top" class="nav-glyphish-example">
-                        <ul>
-                            <li><a href="index.html" id="home" data-icon="custom" data-theme="c">Home</a></li>
-<!--                            <li><a href="#" id="images" data-icon="custom" data-theme="c">Images</a></li>-->
-                            <li><a href="blog.html" id="blog" data-icon="custom" data-theme="c">Blog</a></li>
-                            <li><a href="contact.html" id="contact" data-icon="custom" data-theme="c">Contact</a></li>
-                            <li><a href="places.html" id="map" data-icon="custom" data-theme="c">Places</a></li>
-                            <li><a href="favorites.html" id="star" data-icon="custom" data-theme="c">Favorites</a></li>
-                        </ul>
-                    </div>
-                </div>
+                <?php 
+                require ("nav.html");
+                ?>
                 
             </div>
             <!-- Start of first page: #home -->
@@ -121,11 +101,14 @@
                             </p>
 
                     </div><!-- /content -->
-
                     <div data-role="footer" data-theme="d">
                             <h4>jQuery mobile Prototype 2012</h4>
                     </div><!-- /footer -->
             </div><!-- /page home -->
 
-	</body>
-</html>
+
+                    
+<?php
+require("footer.html");
+?>
+                   
