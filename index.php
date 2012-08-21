@@ -1,5 +1,5 @@
 <?php
-require("header.html");
+require("common/header.html");
 ?>
 
 
@@ -18,7 +18,7 @@ require("header.html");
 
 
                 <?php 
-                require ("nav.html");
+                require("common/nav.html");
                 ?>
                 
             </div>
@@ -109,6 +109,6 @@ require("header.html");
 
                     
 <?php
-require("footer.html");
+require("commong/footer.html");
 ?>
                    

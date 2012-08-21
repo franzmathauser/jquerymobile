@@ -8,7 +8,43 @@ $(document).ready(function() {
      // alert('test');
   });
   
-  $('div#blog').live('pagebeforeshow',function(event, ui){
+  $('div#blog').live('pagebeforecreate',loadBlogMessages);
+  
+  $('div#places').live('pagebeforeshow',loadPlacesList);
+  
+  $('div#places_detail').live('pageshow',loadPlacesDetail);
+  
+  
+  
+  $('#blog form').live('submit', function (e) {
+
+    //cache the form element for use in this function
+    var $this = $(this);
+
+    //prevent the default submission of the form
+    e.preventDefault();
+
+    //run an AJAX post request to your server-side script, $this.serialize() is the data from your form being added to the request
+    $.post($this.attr('action'), $this.serialize(), function (responseData) {
+
+        //in here you can analyze the output from your server-side script (responseData) and validate the user's login without leaving the page
+    });
+});
+  
+});
+
+function sortByNameAsc(dataA, dataB)
+{
+        if ( dataA.name.toUpperCase() < dataB.name.toUpperCase() ) 
+                return -1;
+        if ( dataA.name.toUpperCase() > dataB.name.toUpperCase() ) 
+                return 1;
+        return 0; 
+}
+
+
+
+var loadBlogMessages = function(event, ui){
   
     $.ajax({
         type : 'GET',
@@ -24,9 +60,9 @@ $(document).ready(function() {
         }
     });
 
-  });
+  };
   
-  $('div#places').live('pagebeforeshow',function(event, ui){
+var loadPlacesList = function(event, ui){
       
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition( function(position){
@@ -68,12 +104,9 @@ $(document).ready(function() {
       } else {
         alert("GEOlocation not supported!");
       }
+  };
   
-    
-
-  });
-  
-  $('div#places_detail').live('pageshow',function(event, ui){
+var loadPlacesDetail = function(event, ui){
   
     var detailEntry = $('#detail-entry');
     detailEntry.empty();
@@ -101,35 +134,4 @@ $(document).ready(function() {
         }
     });
 
-  });
-  
-  
-  
-  $('#blog form').live('submit', function (e) {
-
-    //cache the form element for use in this function
-    var $this = $(this);
-
-    //prevent the default submission of the form
-    e.preventDefault();
-
-    //run an AJAX post request to your server-side script, $this.serialize() is the data from your form being added to the request
-    $.post($this.attr('action'), $this.serialize(), function (responseData) {
-
-        //in here you can analyze the output from your server-side script (responseData) and validate the user's login without leaving the page
-    });
-});
-  
-});
-
-function sortByNameAsc(dataA, dataB)
-{
-        if ( dataA.name.toUpperCase() < dataB.name.toUpperCase() ) 
-                return -1;
-        if ( dataA.name.toUpperCase() > dataB.name.toUpperCase() ) 
-                return 1;
-        return 0; 
-}
-
-
-
+  };

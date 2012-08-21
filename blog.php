@@ -1,5 +1,5 @@
 <?php
-require("header.html");
+require("common/header.html");
 ?>
             <div data-role="page" id="blog">
 
@@ -15,11 +15,15 @@ require("header.html");
                     </div>
                </div>
                 <?php 
-                require ("nav.html");
+                require ("common/nav.html");
                 ?>
                 
             </div>
 <?php
-require("footer.html");
+require("common/footer.html");
 ?>
+
+<script>
+    $(document).bind('pagebeforecreate', loadBlogMessages);
+</script>
                    

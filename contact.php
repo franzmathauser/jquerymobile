@@ -1,5 +1,5 @@
 <?php
-require("header.html");
+require("common/header.html");
 ?>
             <div data-role="page" id="blog">
 
@@ -10,7 +10,7 @@ require("header.html");
                <div data-role="content">
                    <form action="http://backend.masterthesis.fm/index.php/rest/contacts" method="post" data-ajax="false">
                         <div data-role="fieldcontain">
-                            <label for="basic">Name:</label>
+                            <label for="name">Name:</label>
                             <input type="text" name="name" id="name" value="" data-mini="true" />
                         </div>
                        <div data-role="fieldcontain">
@@ -26,11 +26,11 @@ require("header.html");
                    </form>
                </div>
                 <?php 
-                require ("nav.html");
+                require ("common/nav.html");
                 ?>
                 
             </div>
 <?php
-require("footer.html");
+require("common/footer.html");
 ?>
                    
